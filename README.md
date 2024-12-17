@@ -9,8 +9,10 @@ The backend is powered by Django’s Model-View-Template (MVT) architecture, whi
 # Key Features:
 
 **Article Listing:** The homepage displays a list of article titles pulled from the database. Users can click any title to view the full article.
+![Screenshot 2024-12-17 194049](https://github.com/user-attachments/assets/48a2cd08-d03d-47a4-ac1e-246dd7000f51)
 
 **Article Detail View:** Clicking an article title opens a detailed page where users can read the full article, including its description and content.
+![Screenshot 2024-12-17 194117](https://github.com/user-attachments/assets/fac4c43a-164b-4c55-b396-178a62e4a78a)
 
 **SQLite3 Database:** A lightweight database that simplifies data storage and retrieval.
 
