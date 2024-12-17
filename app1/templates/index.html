@@ -1,0 +1,16 @@
+{% extends 'temp_files/nav.html' %}
+    
+        {% block content %}
+        <section>
+            <h1 id="heading">TODAY'S ARTICLES</h1>
+        {% for i in data %}
+        <a href="{% url 'article' i.id %}" class="varun">
+            <article>
+                <h1>{{i.title}}</h1>
+                <p>{{i.description | truncatewords:10}}</p>
+            </article>
+        </a>
+        {% endfor %}
+        </section>
+        {% endblock content%}
+    

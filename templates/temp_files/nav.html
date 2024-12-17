@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+    <link rel="stylesheet" href="{% static 'app1_css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'app1_css/article.css' %}">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <figure id="sub-nav">
+                <ol>
+                    <li><a href="{% url 'home' %}">My Blogs</a></li>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="#">About</a></li>
+                </ol>
+                <ul><form action="" method="POST">
+                    {% csrf_token %}
+                    <li><input type="text" placeholder="Search article" name="search"><button type="submit">search</button></li>
+                </form>
+                </ul>
+            </figure>
+        </nav>
+    </header>
+    
+    {% block content %}
+
+    {% endblock content %}
+    <script>
+        var varunElements = document.getElementsByClassName('varun');
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        Array.from(varunElements).forEach(element => element.classList.add('animate'));
+    }, 0);
+});
+
+
+    </script>
+</body>
+</html>
